@@ -30,7 +30,7 @@ Using a recent software stack is very useful, because SF14 requires a C++-17 com
 Yes, I plan to run this on a real 486 DX2-66 MHz manufactured in 1992. I can also be run on a 486 DX-33 MHz from 1989 at half speed. I plan to add a Youtube video of the system in action. 
 
 Why not just use a VM?
-- For the fun of it
+- For the fun of it!
 - As a real benchmark: It is very difficult to adjust RAM latency etc. in a VM. To really determine the speed, let's use real hardware from around 1990 :-)
 
 
