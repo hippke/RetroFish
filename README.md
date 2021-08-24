@@ -37,7 +37,7 @@ Why not just use a VM?
 ## How strong is RetroFish?
 On a 486DX2-66 MHz, it calculates about X kNodes per second. Under standard time control (about 3 minutes per move), it calculates X kNodes per move. Following my ELO-with-nodes estimate, its strength should be in the XXXX ELO range under tournament conditions. 
 
-## Can I play my luck against RetroFish?
+## Can I play against RetroFish without powering up my old 486 PC?
 
-Yes, soon! I plan to provide a Lichess bot against which you can play for free. Good luck!
+Yes, soon! I plan to provide a [Lichess bot](https://lichess.org/player/bots) against which you can play for free. Good luck!
 
