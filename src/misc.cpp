@@ -156,7 +156,7 @@ string engine_info(bool to_uci) {
   }
 
   ss << (to_uci  ? "\nid author ": " by ")
-     << "the Stockfish developers (see AUTHORS file)";
+     << "the Stockfish developers";
 
   return ss.str();
 }
