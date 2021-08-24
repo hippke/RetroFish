@@ -2,6 +2,8 @@
 
 RetroFish is based on [Stockfish](https://stockfishchess.org), the strongest chess engine. It aims to port the most recent version to the oldest possible machine, including the NNUE evaluation based on efficiently updatable neural networks.
 
+![image](https://raw.githubusercontent.com/hippke/RetroFish/master/docs/logo.png)
+
 ## Why run Stockfish on very old computers?
 My key motivation is an impossible question: Would the artificial general intelligence of the future run on present hardware? Would it run on even older hardware? Perhaps all we need for real machine intelligence is the right algorithm? This problem is also known as "hardware overhang", and I wrote in more detailed about (links [1](https://www.lesswrong.com/posts/75dnjiD8kv2khe9eQ/measuring-hardware-overhang), [2](https://www.lesswrong.com/posts/75dnjiD8kv2khe9eQ/measuring-hardware-overhang), [3](https://www.lesswrong.com/posts/J6gktpSgYoyq5q3Au/benchmarking-an-old-chess-engine-on-new-hardware)).
 
@@ -20,12 +22,9 @@ Stockfish 14 uses a neural network with a size of 45 MB, plus a few MB for the e
 # Compilation
 Can we run Stockfish on a 486 with a lot of RAM? Yes, we can! It is not trivial, but most of the compexity is in the foundation. Stockfish is open source, so we can modify and compile it. There are two main options: Windows and Linux. Due to my familarity with the latter, I chose Linux. Building on [this great tutorial](https://github.com/yeokm1/gentoo-on-486), I managed to install Gentoo Linux with the most recent Kernel 5.10 on a 486 machine. Here is a screenshot of the installation from a VM:
 
-[image]
+![image](https://raw.githubusercontent.com/hippke/RetroFish/master/docs/qemu.png)
 
-Using a recent software stack is very useful, because SF14 requires a C++-17 compiler to build (there is also the [CFish port](https://github.com/syzygy1/Cfish) which only requires C-11). Using GCC-10 or GCC-11, we can build Stockfish on the 486 with some Makefile modifications:
-
-[image2]
-
+Using a recent software stack is very useful, because SF14 requires a C++-17 compiler to build (there is also the [CFish port](https://github.com/syzygy1/Cfish) which only requires C-11). Using GCC-10 or GCC-11, we can build Stockfish on the 486 with some Makefile modifications.
 
 ## How strong is RetroFish?
 On a 486DX2-66 MHz, it calculates about X kNodes per second. Under standard time control (about 3 minutes per move), it calculates X kNodes per move. Following my ELO-with-nodes estimate, its strength should be in the XXXX ELO range under tournament conditions. 
