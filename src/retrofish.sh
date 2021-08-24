@@ -1,1 +1,2 @@
-
+jp2a retrofish-mini.jpg  --color --border --size=80x28
+./stockfish
