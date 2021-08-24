@@ -94,7 +94,7 @@ endif
 ### 2.1. General and architecture defaults
 
 ifeq ($(ARCH),)
-   ARCH = x86-64-modern
+   ARCH = x86-32
    help_skip_sanity = yes
 endif
 # explicitly check for the list of supported architectures (as listed with make help),
