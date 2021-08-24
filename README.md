@@ -5,7 +5,7 @@ RetroFish is based on [Stockfish](https://stockfishchess.org), the strongest che
 ![image](https://raw.githubusercontent.com/hippke/RetroFish/master/docs/logo.png)
 
 ## Why run Stockfish on very old computers?
-My key motivation is an impossible question: Would the artificial general intelligence of the future run on present hardware? Would it run on even older hardware? Perhaps all we need for real machine intelligence is the right algorithm? This problem is also known as "hardware overhang", and I wrote in more detailed about (links [1](https://www.lesswrong.com/posts/75dnjiD8kv2khe9eQ/measuring-hardware-overhang), [2](https://www.lesswrong.com/posts/75dnjiD8kv2khe9eQ/measuring-hardware-overhang), [3](https://www.lesswrong.com/posts/J6gktpSgYoyq5q3Au/benchmarking-an-old-chess-engine-on-new-hardware)).
+My key motivation is an impossible question: Would the artificial general intelligence of the future run on present hardware? Would it run on even older hardware? Perhaps all we need for real machine intelligence is the right algorithm? This problem is also known as "hardware overhang". (Some of my thoughts: [1](https://www.lesswrong.com/posts/75dnjiD8kv2khe9eQ/measuring-hardware-overhang), [2](https://www.lesswrong.com/posts/75dnjiD8kv2khe9eQ/measuring-hardware-overhang), [3](https://www.lesswrong.com/posts/J6gktpSgYoyq5q3Au/benchmarking-an-old-chess-engine-on-new-hardware)).
 
 There is a way to gather some insight regarding these questions. We can take modern AI algorithms, port them backwards as much as possible, and examine the effects. As usual, making real experiments is most useful. 
 
