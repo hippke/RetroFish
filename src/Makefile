@@ -112,7 +112,7 @@ endif
 optimize = yes
 debug = no
 sanitize = none
-bits = 64
+bits = 32
 prefetch = no
 popcnt = no
 pext = no
@@ -137,12 +137,12 @@ ifeq ($(findstring x86,$(ARCH)),x86)
 ifeq ($(findstring x86-32,$(ARCH)),x86-32)
 	arch = i386
 	bits = 32
-	sse = yes
-	mmx = yes
+	sse = no
+	mmx = no
 else
-	arch = x86_64
-	sse = yes
-	sse2 = yes
+	arch = x86_32
+	sse = no
+	sse2 = no
 endif
 
 ifeq ($(findstring -sse,$(ARCH)),-sse)
@@ -317,7 +317,7 @@ endif
 ### 3.1 Selecting compiler (default = gcc)
 CXXFLAGS += -Wall -Wcast-qual -fno-exceptions -std=c++17 $(EXTRACXXFLAGS)
 DEPENDFLAGS += -std=c++17
-LDFLAGS += $(EXTRALDFLAGS)
+LDFLAGS += $(EXTRALDFLAGS) -latomic -lpthread
 
 ifeq ($(COMP),)
 	COMP=gcc
@@ -327,6 +327,7 @@ ifeq ($(COMP),gcc)
 	comp=gcc
 	CXX=g++
 	CXXFLAGS += -pedantic -Wextra -Wshadow
+	
 
 	ifeq ($(arch),$(filter $(arch),armv7 armv8))
 		ifeq ($(OS),Android)
