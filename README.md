@@ -26,6 +26,13 @@ Can we run Stockfish on a 486 with a lot of RAM? Yes, we can! It is not trivial,
 
 Using a recent software stack is very useful, because SF14 requires a C++-17 compiler to build (there is also the [CFish port](https://github.com/syzygy1/Cfish) which only requires C-11). Using GCC-10 or GCC-11, we can build Stockfish on the 486 with some Makefile modifications.
 
+```
+git clone https://github.com/hippke/RetroFish.git --depth=1
+cd Retrofish/src
+make build
+bash retrofish.sh
+```
+
 ### Real retro hardware!?
 Yes, I plan to run this on a real 486 DX2-66 MHz manufactured in 1992. I can also be run on a 486 DX-33 MHz from 1989 at half speed. I plan to add a Youtube video of the system in action. 
 
