@@ -50,7 +50,8 @@ Why not just use a VM?
 
 
 ## How strong is RetroFish?
-On a 486DX2-66 MHz, it calculates about X kNodes per second. Under standard time control (about 3 minutes per move), it calculates X kNodes per move. Following my ELO-with-nodes estimate, its strength should be in the XXXX ELO range under tournament conditions. 
+On a 486DX2-66 MHz, it calculates about X kNodes per second. Under standard time control (about 3 minutes per move), it calculates X kNodes per move. For comparison, an AMD Ryzen 9 5950X 16-Core achieves [55 MNodes/s](https://openbenchmarking.org/test/pts/stockfish-1.0.0), making it X times faster. 
+Following my ELO-with-nodes estimate, the 486 playing strength should be in the XXXX ELO range under tournament conditions (120 minutes for 40 moves, i.e. 3 minutes per move). 
 
 ## Can I play against RetroFish without powering up my old 486 PC?
 
