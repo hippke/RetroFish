@@ -42,7 +42,7 @@ dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 3.2.0, strippe
 
 
 ### Real retro hardware!?
-Yes, I plan to run this on a real 486 DX2-66 MHz manufactured in 1992. I can also be run on a 486 DX-33 MHz from 1989 at half speed. I plan to add a Youtube video of the system in action. 
+Yes, I plan to run this on a real 486 DX2-66 MHz manufactured in 1992. It can also be run on a 486 DX-33 MHz from 1989 at half speed. I plan to add a Youtube video of the system in action. 
 
 Why not just use a VM?
 - For the fun of it!
