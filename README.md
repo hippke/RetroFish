@@ -19,7 +19,7 @@ To make this experiment somewhat realistic, I will stick to standard hardware an
 ### RAM
 Stockfish 14 uses a neural network with a size of 45 MB, plus a few MB for the engine, plus some hash for the search tree. In addition, we want to run an operating system and a way to transmit the best moves (e.g., an SSH session). I find that 64 MB are sufficient with swapping (reducing performance), and 128 MB should be fine. This requirement immediately excludes PCs from the 386 era and older, except perhaps exotic server hardware or MIPS/RISC hardware. I may look into these at a later time. The following generation of 486 CPUs, however, provides several consumer class mainboards which support 256 MB of RAM. Back in the days, a configuration with 4 or 8 MB was typical. In 1990, a set of 256 MB of RAM chips would have cost the equivalent of a nice car. Today, we can buy the hardware on a flea market (and hope it still runs). Fittingly, the 486DX is described as ([1992 commercial](https://www.youtube.com/watch?v=d77dTqrMAPw)):
 
-*"Want to run your windowing software fast? Then you need a power source inside your PC that offers high performance and the power to cope with tomorrow's advanced applications! It's called the Intel 486 DX2 processor and it is compatible with all popular software..."*
+*"Want to run your windowing software fast? Then you need a power source inside your PC that offers high performance and the power to cope with _tomorrow's advanced applications_! It's called the Intel 486 DX2 processor and it is compatible with all popular software..."*
 
 
 ### Compilation
