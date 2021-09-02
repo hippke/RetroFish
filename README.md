@@ -2,7 +2,7 @@
 
 RetroFish is based on [Stockfish](https://stockfishchess.org), the strongest chess engine. It aims to port the most recent version to the oldest possible machine, including the NNUE evaluation based on efficiently updatable neural networks.
 
-![image](https://raw.githubusercontent.com/hippke/RetroFish/master/docs/logo.png)
+![image](https://raw.githubusercontent.com/hippke/RetroFish/master/docs/logo_green.png)
 
 ## Why run Stockfish on very old computers?
 My key motivation is an impossible question: Would the artificial general intelligence of the future run on present hardware? Would it run on even older hardware? Perhaps all we need for real machine intelligence is the right algorithm? This problem is also known as "hardware overhang". (Some of my thoughts: [1](https://www.lesswrong.com/posts/75dnjiD8kv2khe9eQ/measuring-hardware-overhang), [2](https://www.lesswrong.com/posts/75dnjiD8kv2khe9eQ/measuring-hardware-overhang), [3](https://www.lesswrong.com/posts/J6gktpSgYoyq5q3Au/benchmarking-an-old-chess-engine-on-new-hardware)).
