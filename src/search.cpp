@@ -903,11 +903,16 @@ namespace {
          ss->ttPv = ttPv;
     }
 
-    // Step 10. If the position is not in TT, decrease depth by 2
+    // Step 10. If the position is not in TT, decrease depth by 2 or 1 depending on node type
     if (   PvNode
         && depth >= 6
         && !ttMove)
         depth -= 2;
+
+    if (   cutNode
+        && depth >= 9
+        && !ttMove)
+        depth--;
 
 moves_loop: // When in check, search starts here
 
@@ -1018,9 +1023,10 @@ moves_loop: // When in check, search starts here
           else
           {
               // Continuation history based pruning (~20 Elo)
-              if (   lmrDepth < 5
-                  && (*contHist[0])[movedPiece][to_sq(move)] < 23 - 23 * depth * depth
-                  && (*contHist[1])[movedPiece][to_sq(move)] < 23 - 23 * depth * depth)
+              if (lmrDepth < 5
+                  && (*contHist[0])[movedPiece][to_sq(move)]
+                  + (*contHist[1])[movedPiece][to_sq(move)]
+                  + (*contHist[3])[movedPiece][to_sq(move)] < -3000 * depth + 3000)
                   continue;
 
               // Futility pruning: parent node (~5 Elo)
@@ -1093,6 +1099,14 @@ moves_loop: // When in check, search starts here
                   return beta;
           }
       }
+
+      // Capture extensions for PvNodes and cutNodes
+      else if (   (PvNode || cutNode) 
+               && captureOrPromotion 
+               && moveCount != 1)
+          extension = 1;
+
+      // Check extensions
       else if (   givesCheck
                && depth > 6
                && abs(ss->staticEval) > Value(100))
@@ -1316,7 +1330,7 @@ moves_loop: // When in check, search starts here
     // Bonus for prior countermove that caused the fail low
     else if (   (depth >= 3 || PvNode)
              && !priorCapture)
-        update_continuation_histories(ss-1, pos.piece_on(prevSq), prevSq, stat_bonus(depth));
+        update_continuation_histories(ss-1, pos.piece_on(prevSq), prevSq, stat_bonus(depth) * (1 + (PvNode || cutNode)));
 
     if (PvNode)
         bestValue = std::min(bestValue, maxValue);
